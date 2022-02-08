@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Akhir Font -->
+    <!-- my CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Akhir CSS -->
+    <title>Belajar Tailwind</title>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3;
+      }
+    </style>
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-100">
+    <h1 class="my-10 text-center text-8xl font-bold">
+      Mari Belajar
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
+        >TailwindCSS</span
+      >
+    </h1>
+
+    <section
+      class="mb-10 bg-gradient-to-r from-blue-500 via-red-500 to-yellow-400 text-white"
+    >
+      <h2 class="text-center text-3xl font-semibold">Spacing</h2>
+      <div class="m-13">Margin</div>
+      <div class="p-8">Padding</div>
+    </section>
+
+    <section class="mb-10 h-52 bg-purple-700">
+      <h2 class="text-center text-3xl font-semibold text-white">Sizing</h2>
+      <div
+        class="ml-13 h-32 w-32 rounded bg-yellow-300 pt-10 text-center text-black"
+      >
+        Kotak1
+      </div>
+    </section>
+
+    <section class="font-inter mx-auto max-w-3xl">
+      <h2 class="mb-2 text-3xl font-bold">
+        Belajar Mengenai Typography pada TailwindCSS
+      </h2>
+      <div class="mb-4 text-lg text-gray-500">
+        by
+        <a href="#" class="font-semibold text-gray-800 dark:text-white">BWS</a>,
+        1 Januari 2022
+      </div>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet
+        <a href="#" class="font-semibold underline hover:text-blue-500"
+          >consectetur</a
+        >
+        adipisicing elit. Unde eius consectetur temporibus asperiores
+        voluptatem, explicabo labore nesciunt saepe quia cum obcaecati facere,
+        hic minima aliquid laudantium dolore. Aut corporis vero libero ratione
+        impedit assumenda eveniet. Numquam, incidunt aliquid explicabo repellat
+        est minus, porro obcaecati voluptates, sunt nostrum voluptas repellendus
+        culpa!
+      </p>
+      <blockquote class="mb-4 text-lg font-thin italic">
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
+        placeat veniam facere voluptatibus quam, deleniti accusamus? Sit
+        praesentium quia ducimus!"
+      </blockquote>
+      <p class="mb-4">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore soluta
+        nobis recusandae dolorem id, fuga assumenda possimus obcaecati, ab magni
+        illo modi harum. Vitae ipsum, architecto quia corporis atque harum.
+      </p>
+    </section>
+
+    <div
+      class="mx-auto mt-[42px] h-96 max-w-xl overflow-y-auto bg-slate-500 bg-cover bg-fixed"
+      style="background-image: url('https://source.unsplash.com/1000x600')"
+    >
+      <p class="p-5 text-2xl text-white">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores,
+        necessitatibus eveniet! Dolorum, deleniti atque optio eligendi excepturi
+        hic id ad quidem, exercitationem natus quod error corrupti reprehenderit
+        obcaecati quaerat? Impedit a culpa repellendus quia saepe architecto
+        fuga ducimus ut iure ab eius harum ad officia, repellat dolorum sequi
+        nam eos velit sunt ex quibusdam eaque modi minima. Praesentium tempore
+        hic ab qui atque? Mollitia quos quod commodi vel officiis voluptate
+        iusto. Eius illo accusamus, odit veritatis placeat ex in! Esse, vitae.
+        Incidunt, natus tempora suscipit, aut soluta similique at expedita
+        ratione, odio omnis eligendi recusandae? Modi nostrum facere velit magni
+        pariatur beatae dicta ea quibusdam suscipit sint eveniet, in harum
+        explicabo repellendus animi rerum, quo autem dolore repudiandae ipsam
+        omnis maxime corporis possimus. Maxime veniam, ad optio molestiae
+        officiis veritatis minus unde itaque animi! Doloremque ratione eius modi
+        excepturi, tempore accusantium in iusto quae laboriosam nisi saepe, ut
+        provident veritatis facere ducimus nesciunt perspiciatis, reprehenderit
+        repellat. Quo voluptatum, qui ipsa accusantium saepe tenetur. Tempora
+        incidunt vero laborum odio maiores sequi similique iusto nemo inventore
+        expedita aliquid officia porro itaque, accusantium minus, sunt pariatur
+        accusamus. Rem, facere consequuntur consequatur animi praesentium
+        incidunt et sint ullam blanditiis ea repudiandae qui ratione saepe.
+      </p>
+    </div>
+
+    <div
+      class="mx-auto mt-32 h-96 max-w-xl overflow-hidden rounded-2xl bg-slate-700 bg-cover shadow-xl shadow-pink-500"
+      style="background-image: url(./img/1.jpg)"
+    >
+      <!-- <div class="w-full h-full bg-pink-400 mix-blend-multiply"></div> -->
+    </div>
+
+    <hr class="my-20" />
+
+    <!-- toggle darkmode -->
+
+    <div class="flex justify-center">
+      <span class="mr-2 text-sm text-slate-500">Light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div
+          class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+        >
+          <div class="toggle-circle h-4 w-4 rounded-full bg-white"></div>
+        </div>
+      </label>
+      <span class="ml-2 text-sm text-slate-500">Dark</span>
+    </div>
+
+    <!-- Akhir Toggle darkmode -->
+
+    <button
+      class="font-inter my-10 mx-auto block rounded-full bg-sky-500 px-5 py-2 font-semibold text-white hover:bg-sky-600 focus:ring focus:ring-sky-300 active:bg-sky-700 dark:bg-slate-300 dark:text-slate-800 dark:hover:bg-slate-100 dark:hover:text-slate-900 dark:focus:ring-slate-100 dark:active:bg-slate-100"
+    >
+      Save
+    </button>
+
+    <!-- Card -->
+    <div
+      class="font-inter group my-10 mx-auto max-w-lg rounded-xl border border-slate-300 p-5 font-serif shadow-md hover:bg-sky-700 dark:hover:bg-slate-300"
+    >
+      <h5
+        class="mb-3 text-lg font-bold text-slate-700 group-hover:text-white dark:text-white dark:group-hover:text-slate-800"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-600 first-letter:float-left first-letter:mr-3 first-letter:text-7xl first-line:uppercase first-line:tracking-widest selection:bg-lime-300 selection:text-slate-900 group-hover:text-white dark:text-white dark:group-hover:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
+        expedita dolor. Iure at repellat asperiores distinctio illo, modi ut
+        ullam, saepe excepturi maxime, eaque suscipit magni fugiat dolore earum?
+      </p>
+    </div>
+
+    <!-- Akhir Card -->
+
+    <!-- Form Email -->
+    <div
+      class="font-inter mx-auto max-w-lg rounded-xl border border-slate-300 p-5 shadow-md"
+    >
+      <form action="">
+        <label for="email">
+          <span
+            class="mb-1 block font-semibold text-slate-700 after:ml-0.5 after:text-pink-500 after:content-['*'] dark:text-white"
+            >Email
+          </span>
+          <input
+            id="email"
+            type="email"
+            placeholder="example@email.com"
+            class="peer valid: block w-full rounded border px-3 py-2 text-sm text-slate-900 shadow-md ring-pink-700 placeholder:text-slate-400 invalid:text-pink-700 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 invalid:focus:border-pink-700 invalid:focus:ring-pink-700"
+          />
+          <p class="invisible m-1 text-sm text-pink-700 peer-invalid:visible">
+            Email tidak valid
+          </p>
+        </label>
+      </form>
+    </div>
+
+    <!-- Akhri form email -->
+
+    <hr class="my-20" />
+
+    <!-- Transform -->
+
+    <div></div>
+
+    <!-- Akhri transform -->
+
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
