@@ -9,12 +9,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^3.0.16"
-  },
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
     "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.5"
+    "prettier-plugin-tailwindcss": "^0.1.5",
+    "tailwindcss": "^3.0.19"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bangkitwahyus/belajar-tailwind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bangkitwahyus/belajar-tailwind/issues"
+  },
+  "homepage": "https://github.com/bangkitwahyus/belajar-tailwind#readme",
   "description": ""
 }
