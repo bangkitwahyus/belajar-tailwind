@@ -17,7 +17,7 @@
     <!-- Akhir CSS -->
     <title>Belajar Tailwind</title>
     <style type="text/tailwindcss">
-      #toggle:checked ~ label div.toggle-circle {
+      #toggle:checked ~ .toggle-circle {
         @apply translate-x-3;
       }
     </style>
@@ -191,7 +191,19 @@
 
     <!-- Transform -->
 
-    <div></div>
+    <div
+      class="mx-auto h-40 w-40 origin-top-left rounded-lg bg-sky-500 shadow-lg transition hover:rotate-180 hover:scale-125 hover:bg-pink-500"
+    ></div>
+
+    <div class="group mx-auto mt-20 h-40 w-40">
+      <div
+        class="h-full w-full origin-top-left rounded-lg bg-sky-500 shadow-lg transition duration-500 ease-linear group-hover:rotate-180 group-hover:bg-pink-500"
+      ></div>
+    </div>
+
+    <div
+      class="animate-shake mx-auto mt-20 h-40 w-40 rounded-lg bg-pink-500 shadow-lg transition"
+    ></div>
 
     <!-- Akhri transform -->
 
