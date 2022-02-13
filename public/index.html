@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,7 +17,7 @@
     <!-- Akhir CSS -->
     <title>Belajar Tailwind</title>
     <style type="text/tailwindcss">
-      #toggle:checked ~ .toggle-circle {
+      #toggle:checked ~ label div.toggle-circle {
         @apply translate-x-3;
       }
     </style>
@@ -206,6 +206,53 @@
     ></div>
 
     <!-- Akhri transform -->
+
+    <hr class="my-20 border-t-4" />
+
+    <!-- Layouting -->
+
+    <div class="container m-auto">
+      <div class="relative rounded-lg border-2 p-10 shadow-lg">
+        <div
+          class="absolute -top-5 -right-5 flex h-10 w-10 cursor-pointer rounded-full bg-pink-200"
+        >
+          <span class="m-auto text-lg">❌</span>
+        </div>
+        <div
+          class="fixed bottom-5 right-5 flex h-10 w-10 cursor-pointer rounded-full bg-sky-300"
+        >
+          <a href="#" class="m-auto text-xl">🔺</a>
+        </div>
+        <img src="img/1.jpg" alt="room" width="150" class="float-left mr-3" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque alias,
+          saepe, tempora ut atque ipsum consectetur libero, error dignissimos
+          labore sint? Sint, provident repudiandae rem nulla distinctio in quo
+          neque tempora exercitationem itaque quam temporibus laborum numquam
+          voluptatibus commodi modi animi officiis iste hic. Quam ex, eligendi
+          blanditiis possimus unde quo, modi commodi atque laudantium debitis
+          accusantium molestias fuga magni voluptatibus? Praesentium temporibus
+          ullam eum molestiae enim asperiores voluptates nobis, error velit,
+          quae, quam explicabo recusandae odit quasi reiciendis obcaecati sequi
+          sapiente magni eos eligendi. Veniam voluptates adipisci, est
+          distinctio cumque minus animi, ex quam corporis accusantium aperiam
+          commodi magnam.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="container mx-auto mt-20 columns-3 rounded-lg border-2 p-10 shadow-lg"
+    >
+      <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
+      <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
+      <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
+      <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
+      <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
+      <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
+    </div>
+
+    <!-- Akhir Layouting -->
 
     <div class="mb-96"></div>
 
