@@ -423,6 +423,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+h1 {
+  font-size: 6rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(186 218 85 / var(--tw-text-opacity));
+  /*
+    color: theme(colors.bada); */
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -500,6 +509,54 @@ Ensure the default browser behavior of the `hidden` attribute.
   .container {
     max-width: 1536px;
   }
+}
+
+.grid-card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.grid-card:hover {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px) {
+  .grid-card {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-card {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.grid-card-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.group:hover .grid-card-img {
+  --tw-rotate: 12deg;
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .invisible {
@@ -655,10 +712,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hidden {
   display: none;
-}
-
-.aspect-\[4\/3\] {
-  aspect-ratio: 4 / 3;
 }
 
 .h-52 {
@@ -904,53 +957,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\/public\/grid\/1\.jpg\'\)\] {
-  background-image: url('/public/grid/1.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/2\.jpg\'\)\] {
-  background-image: url('/public/grid/2.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/3\.jpg\'\)\] {
-  background-image: url('/public/grid/3.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/4\.jpg\'\)\] {
-  background-image: url('/public/grid/4.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/5\.jpg\'\)\] {
-  background-image: url('/public/grid/5.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/6\.jpg\'\)\] {
-  background-image: url('/public/grid/6.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/7\.jpg\'\)\] {
-  background-image: url('/public/grid/7.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/8\.jpg\'\)\] {
-  background-image: url('/public/grid/8.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/9\.jpg\'\)\] {
-  background-image: url('/public/grid/9.jpg');
-}
-
-.bg-\[url\(\'\/public\/grid\/10\.jpg\'\)\] {
-  background-image: url('/public/grid/10.jpg');
 }
 
 .bg-\[url\(\'\/public\/img\/grid\/1\.jpg\'\)\] {
@@ -1023,18 +1031,9 @@ Ensure the default browser behavior of the `hidden` attribute.
           background-clip: text;
 }
 
-.bg-center {
-  background-position: center;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.object-right {
-  -o-object-position: right;
-     object-position: right;
 }
 
 .p-8 {
@@ -1266,12 +1265,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -1398,12 +1391,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:scale-95:hover {
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:bg-sky-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(2 132 199 / var(--tw-bg-opacity));
@@ -1473,17 +1460,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .group:hover .group-hover\:rotate-180 {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:rotate-12 {
-  --tw-rotate: 12deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1639,10 +1615,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: flex;
   }
 
-  .md\:aspect-\[3\/4\] {
-    aspect-ratio: 3 / 4;
-  }
-
   .md\:w-full {
     width: 100%;
   }
@@ -1710,11 +1682,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:p-12 {
     padding: 3rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:aspect-\[4\/3\] {
-    aspect-ratio: 4 / 3;
   }
 }

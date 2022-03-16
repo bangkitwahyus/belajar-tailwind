@@ -6,6 +6,9 @@ module.exports = {
       spacing: {
         13: "3.25rem",
       },
+      colors: {
+        bada: "#bada55",
+      },
       fontFamily: {
         inter: ["Inter"],
       },
